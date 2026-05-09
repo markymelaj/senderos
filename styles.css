@@ -430,6 +430,89 @@ h3 {
 .org-list span { color: var(--azul); font-weight: 900; }
 .org-list p { margin: 4px 0 0; color: var(--muted); }
 
+/* ------- Modelos clínicos ------- */
+.frameworks-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  gap: 22px;
+  align-items: stretch;
+}
+.framework-side {
+  display: grid;
+  gap: 18px;
+}
+.framework-card {
+  background: #fff;
+  border: 1px solid var(--linea);
+  border-radius: var(--radius);
+  padding: 26px;
+  box-shadow: 0 16px 40px rgba(11,47,102,.06);
+}
+.framework-card.featured {
+  background: linear-gradient(150deg, #0b2f66 0%, #134f88 60%, #1d6cb1 100%);
+  color: #fff;
+  border: 0;
+  box-shadow: 0 24px 60px rgba(11,47,102,.22);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.framework-card.featured h3 { color: #fff; font-size: 1.5rem; line-height: 1.2; margin: 0; }
+.framework-card.featured p { margin: 0; color: rgba(255,255,255,.92); }
+.framework-card.featured .framework-foot {
+  margin-top: 8px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255,255,255,.18);
+  font-size: .95rem;
+  color: rgba(255,255,255,.84);
+}
+.framework-card p { color: #344054; margin: 0; }
+.framework-tag {
+  display: inline-block;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  font-size: .72rem;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.18);
+  color: #fff;
+  margin-bottom: 4px;
+}
+.framework-tag.alt {
+  background: var(--rosa);
+  color: var(--magenta);
+  margin-bottom: 10px;
+}
+
+/* ------- Equipo interdisciplinario ------- */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 36px;
+}
+.team-grid article {
+  background: #fff;
+  border: 1px solid var(--linea);
+  border-radius: 22px;
+  padding: 22px;
+  box-shadow: 0 14px 34px rgba(11,47,102,.05);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.team-grid article:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 44px rgba(11,47,102,.10);
+}
+.team-grid strong {
+  display: block;
+  color: var(--azul);
+  font-size: 1.04rem;
+  margin-bottom: 8px;
+  letter-spacing: -0.015em;
+}
+.team-grid p { margin: 0; color: var(--muted); font-size: .92rem; line-height: 1.45; }
+
 .donate-section {
   color: white;
   background:
@@ -542,10 +625,42 @@ h3 {
 .delay-2 { transition-delay: .16s; }
 .delay-3 { transition-delay: .24s; }
 
+/* ------- WhatsApp floating button ------- */
+.whatsapp-fab {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 1100;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 20px 14px 16px;
+  border-radius: 999px;
+  background: #25d366;
+  color: #fff !important;
+  font-weight: 800;
+  letter-spacing: .01em;
+  box-shadow: 0 18px 40px rgba(37,211,102,.45), 0 4px 14px rgba(0,0,0,.08);
+  transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
+}
+.whatsapp-fab:hover {
+  transform: translateY(-3px) scale(1.03);
+  background: #1ebe59;
+  box-shadow: 0 22px 50px rgba(37,211,102,.55), 0 6px 16px rgba(0,0,0,.1);
+}
+.whatsapp-fab:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 3px;
+}
+.whatsapp-fab svg { width: 26px; height: 26px; flex: none; }
+.whatsapp-fab-label { font-size: .98rem; }
+
 @media (max-width: 1020px) {
   .main-nav { gap: 12px; font-size: .88rem; }
   .program-grid, .impact-grid { grid-template-columns: repeat(2, 1fr); }
   .steps-grid { grid-template-columns: repeat(2, 1fr); }
+  .team-grid { grid-template-columns: repeat(3, 1fr); }
+  .frameworks-grid { grid-template-columns: 1fr; }
   .hero-grid, .two-col, .donate-grid, .contact-grid { gap: 38px; }
 }
 
@@ -580,11 +695,16 @@ h3 {
   }
   .logo-panel { min-height: 260px; }
   .program-grid, .steps-grid, .impact-grid, .mini-grid { grid-template-columns: 1fr; }
+  .team-grid { grid-template-columns: repeat(2, 1fr); }
   .program-card { min-height: auto; }
   .help-cards a { align-items: flex-start; flex-direction: column; gap: 8px; }
   .help-cards span { text-align: left; }
   .footer-bottom { flex-direction: column; }
   .reverse-mobile .visual-card { order: 2; }
+  .framework-card.featured h3 { font-size: 1.3rem; }
+  .whatsapp-fab { right: 14px; bottom: 14px; padding: 12px 16px 12px 14px; }
+  .whatsapp-fab-label { display: none; }
+  .whatsapp-fab svg { width: 28px; height: 28px; }
 }
 
 @media (max-width: 520px) {
@@ -598,4 +718,6 @@ h3 {
   .btn { width: 100%; }
   .hero-card, .contact-form { padding: 18px; border-radius: 26px; }
   .statement-card, .program-card, .steps-grid article, .impact-grid article { padding: 22px; }
+  .team-grid { grid-template-columns: 1fr; }
+  .framework-card { padding: 22px; }
 }
