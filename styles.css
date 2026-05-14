@@ -540,10 +540,11 @@ h3 {
   gap: 6px;
 }
 .spiritual-list li {
-  color: #5b21b6;
+  color: #fff;
   font-size: .92rem;
   padding-left: 18px;
   position: relative;
+  font-weight: 700;
 }
 .spiritual-list li::before {
   content: '✦';
