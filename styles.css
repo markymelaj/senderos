@@ -453,7 +453,7 @@ h3 {
   gap: 16px;
 }
 .framework-card.featured.matrix {
-  background: linear-gradient(150deg, #134f88 0%, #1a6faa 100%);
+  background: linear-gradient(150deg, #0b2f66 0%, #134f88 60%, #1d6cb1 100%);
 }
 .framework-card.featured p { margin: 0; color: rgba(255,255,255,.92); }
 .framework-card.featured .framework-foot {
@@ -522,9 +522,17 @@ h3 {
   border-radius: 999px;
 }
 .spiritual-card {
-  border-color: #c4b5fd;
-  background: linear-gradient(145deg, #faf5ff 0%, #ede9ff 100%);
+  background: linear-gradient(150deg, #e6005c 0%, #b6004a 100%);
+  border: 0;
+  box-shadow: 0 20px 50px rgba(230,0,92,.28);
 }
+.spiritual-card .framework-tag.spiritual {
+  background: rgba(255,255,255,.18);
+  color: #fff;
+}
+.spiritual-card p { color: rgba(255,255,255,.92) !important; }
+.spiritual-list li { color: rgba(255,255,255,.92); }
+.spiritual-list li::before { color: rgba(255,255,255,.7); }
 .spiritual-list {
   flex-direction: column;
   gap: 6px;
