@@ -530,9 +530,11 @@ h3 {
   background: rgba(255,255,255,.18);
   color: #fff;
 }
-.spiritual-card p { color: rgba(255,255,255,.92) !important; }
-.spiritual-list li { color: rgba(255,255,255,.92); }
-.spiritual-list li::before { color: rgba(255,255,255,.7); }
+.spiritual-card p,
+.spiritual-card .spiritual-list li {
+  color: #fff !important;
+}
+.spiritual-list li::before { color: rgba(255,255,255,.8); }
 .spiritual-list {
   flex-direction: column;
   gap: 6px;
