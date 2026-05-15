@@ -534,6 +534,7 @@ h3 {
 .spiritual-card .spiritual-list li {
   color: #fff !important;
 }
+.spiritual-list li { font-weight: 700; color: var(--azul) !important; }
 .spiritual-list li::before { color: var(--azul); }
 .spiritual-list {
   flex-direction: column;
