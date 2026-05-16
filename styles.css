@@ -527,15 +527,10 @@ h3 {
   box-shadow: 0 20px 50px rgba(230,0,92,.28);
 }
 .spiritual-card .framework-tag.spiritual {
-  background: var(--azul);
+  background: #0B2F66;
   color: #fff;
 }
-.spiritual-card p,
-.spiritual-card .spiritual-list li {
-  color: #fff !important;
-}
-.spiritual-list li { font-weight: 700; color: var(--azul) !important; }
-.spiritual-list li::before { color: #0B2F66; }
+.spiritual-card p { color: #fff; }
 .spiritual-list {
   flex-direction: column;
   gap: 6px;
@@ -543,9 +538,9 @@ h3 {
 .spiritual-list li {
   color: #fff;
   font-size: .92rem;
+  font-weight: 700;
   padding-left: 18px;
   position: relative;
-  font-weight: 700;
 }
 .spiritual-list li::before {
   content: '✦';
@@ -553,7 +548,7 @@ h3 {
   left: 0;
   font-size: .65rem;
   top: 2px;
-  color: #7c3aed;
+  color: #0B2F66 !important;
 }
 
 /* ------- Programa Online destacado ------- */
