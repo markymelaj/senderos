@@ -535,7 +535,7 @@ h3 {
   color: #fff !important;
 }
 .spiritual-list li { font-weight: 700; color: var(--azul) !important; }
-.spiritual-list li::before { color: var(--azul); }
+.spiritual-list li::before { color: #0B2F66; }
 .spiritual-list {
   flex-direction: column;
   gap: 6px;
